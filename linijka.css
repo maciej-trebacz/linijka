@@ -70,3 +70,8 @@ a.post-vote:hover {
     color: #888;
     margin: 0;
 }
+
+.post-list-no-posts {
+    text-align: center;
+    color: #aaa;
+}

@@ -31,9 +31,13 @@
 
 <template name="postList">
     <div class="container post-list">
+        {{#if posts}}
         {{#each posts}}
             {{> postListItem}}
         {{/each}}
+        {{else}}
+            <h3 class="post-list-no-posts">Nie ma żadnych postów :(</h3>
+        {{/if}}
     </div>
 </template>
 
@@ -46,7 +50,7 @@
         </div>
         <div class="post-details">
             <h3><a href="{{link}}" target="_blank">{{title}}</a></h3>
-            <p class="post-date-author">dodane o {{time}} przez <span class="post-author">{{author}}</span></p>
+            <p class="post-date-author">dodane {{time}} przez <span class="post-author">{{author}}</span></p>
             <p class="post-comments"><a href="#">{{comments_num}} komentarzy</a></p>
         </div>
     </div>
