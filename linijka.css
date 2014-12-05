@@ -1,0 +1,68 @@
+/* CSS declarations go here */
+
+body {
+    margin-top: 60px;
+}
+
+.navbar-brand {
+    background: url(linijka.png) no-repeat;
+    background-size: 30px 30px;
+    background-position: 16px 6px;
+    padding-left: 50px;
+    font-family: "Trebuchet MS";
+    color: #567 !important;
+}
+
+.post {
+    clear: both;
+    padding-top: 6px;
+}
+
+.post-votes {
+    width: 60px;
+    float: left;
+}
+
+.post-details {
+}
+
+.post-details h3 {
+    margin-top: 4px;
+    margin-bottom: 2px;
+    font-size: 18px;
+}
+
+.post-details .post-date-author {
+    font-size: 11px;
+    color: #aaa;
+    margin-bottom: 0px;
+}
+
+.post-details .post-comments {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.post-details .post-comments a {
+    color: #999;
+}
+
+a.post-vote {
+    display: block;
+    color: #888;
+    cursor: pointer;
+    text-align: center;
+    margin: 0;
+}
+
+a.post-vote:hover {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.post-vote.vote-count {
+    font-weight: bold;
+    text-align: center;
+    color: #888;
+    margin: 0;
+}
