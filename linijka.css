@@ -38,6 +38,10 @@ body {
     margin-bottom: 0px;
 }
 
+.post-details .post-author {
+    color: #777;
+}
+
 .post-details .post-comments {
     font-size: 12px;
     font-weight: bold;

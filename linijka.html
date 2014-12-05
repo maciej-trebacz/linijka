@@ -3,6 +3,11 @@
 </head>
 
 <body>
+    {{> header}}
+    {{> postList}}
+</body>
+
+<template name="header">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -22,43 +27,27 @@
         </div>
       </div>
     </nav>
+</template>
 
+<template name="postList">
     <div class="container post-list">
-        <div class="post">
-            <div class="post-votes">
-                <a class="post-vote vote-up">▲</a>
-                <p class="post-vote vote-count">123</p>
-                <a class="post-vote vote-down">▼</a>
-            </div>
-            <div class="post-details">
-                <h3><a href="#">Afera zbożowa - znamy dalsze szczegóły</a></h3>
-                <p class="post-date-author">dodane o 12:34 przez <span class="post-author">maver</span></p>
-                <p class="post-comments"><a href="#">123 komentarzy</a></p>
-            </div>
+        {{#each posts}}
+            {{> postListItem}}
+        {{/each}}
+    </div>
+</template>
+
+<template name="postListItem">
+    <div class="post">
+        <div class="post-votes">
+            <a class="post-vote vote-up">▲</a>
+            <p class="post-vote vote-count">{{votes}}</p>
+            <a class="post-vote vote-down">▼</a>
         </div>
-        <div class="post">
-            <div class="post-votes">
-                <a class="post-vote vote-up">▲</a>
-                <p class="post-vote vote-count">123</p>
-                <a class="post-vote vote-down">▼</a>
-            </div>
-            <div class="post-details">
-                <h3><a href="#">Gruntowne zmiany w serwisie Wykop.pl. Od teraz to użytkownicy decydują o tym, co pojawi się na głównej. Rzecznik wypowiedział się...</a></h3>
-                <p class="post-date-author">dodane o 12:34 przez <span class="post-author">maver</span></p>
-                <p class="post-comments"><a href="#">123 komentarzy</a></p>
-            </div>
-        </div>
-        <div class="post">
-            <div class="post-votes">
-                <a class="post-vote vote-up">▲</a>
-                <p class="post-vote vote-count">123</p>
-                <a class="post-vote vote-down">▼</a>
-            </div>
-            <div class="post-details">
-                <h3><a href="#">Prośba o Linijka-Efekt! Chytra baba znowu atakuje</a></h3>
-                <p class="post-date-author">dodane o 12:34 przez <span class="post-author">maver</span></p>
-                <p class="post-comments"><a href="#">123 komentarzy</a></p>
-            </div>
+        <div class="post-details">
+            <h3><a href="{{link}}" target="_blank">{{title}}</a></h3>
+            <p class="post-date-author">dodane o {{time}} przez <span class="post-author">{{author}}</span></p>
+            <p class="post-comments"><a href="#">{{comments_num}} komentarzy</a></p>
         </div>
     </div>
-</body>
+</template>
