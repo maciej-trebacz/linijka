@@ -9,4 +9,5 @@ insecure
 ian:bootstrap-3
 rzymek:moment
 rzymek:moment-locale-pl
+meteorhacks:fast-render
 
