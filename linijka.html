@@ -25,6 +25,9 @@
             <li><a href="#">Nowości</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
+            {{#if user}}
+            <li><a href="#" class="new-post-button">Dodaj</a></li>
+            {{/if}}
             {{> loginButtons align="right"}}
           </ul>
         </div>
@@ -34,6 +37,10 @@
 
 <template name="postList">
     <div class="container post-list">
+        {{#if user}}
+        {{> postAddForm}}
+        {{/if}}
+        
         {{#if posts}}
         {{#each posts}}
             {{> postListItem}}
@@ -57,4 +64,41 @@
             <p class="post-comments"><a href="#">{{comments_num}} komentarzy</a></p>
         </div>
     </div>
+</template>
+
+<template name="postAddForm">
+  <form class="form-horizontal new-post-form hide">
+    <fieldset>
+    <legend>Dodaj nowy post</legend>
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="new-post-link">Link</label>  
+      <div class="col-sm-8">
+        <input id="new-post-link" name="new-post-link" type="text" placeholder="Adres do strony którą chcesz dodać, np.: http://wykop.pl/" class="form-control input-md" required="">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="new-post-title">Tytuł</label>  
+      <div class="col-sm-8">
+        <input id="new-post-title" name="new-post-title" type="text" placeholder="Co zawiera dodawana przez ciebie strona?" class="form-control input-md" required="">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="new-post-description">Opis</label>
+      <div class="col-sm-8">                     
+        <textarea class="form-control" id="new-post-description" name="new-post-description"></textarea>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label" for="new-post-submit"></label>
+      <div class="col-sm-4">
+        <button id="new-post-submit" name="new-post-submit" class="btn btn-primary">Dodaj</button>
+      </div>
+    </div>
+
+    </fieldset>
+  </form>
 </template>
