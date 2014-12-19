@@ -15,7 +15,7 @@
 </template>
 
 <template name="postListItem">
-    <div class="post">
+    <div class="post {{voted}}" data-post-id="{{_id}}">
         <div class="post-votes">
             <a class="post-vote vote-up">▲</a>
             <p class="post-vote vote-count">{{votes}}</p>
