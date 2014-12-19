@@ -2,22 +2,21 @@ Template.postAddForm.events({
     'submit form': function (e) {
         e.preventDefault();
 
+        // Zbieramy dane do wysłania
         var newPost = {
             link: $('#new-post-link').val(),
             title: $('#new-post-title').val(),
-            description: $('#new-post-description').val(),
-            author: Meteor.userId(),
-            votes: 0,
-            comments_num: 0,
-            added_on: new Date()
+            description: $('#new-post-description').val()
         };
 
-        if (!newPost.link || !newPost.title || !newPost.description) {
-            alert("Wypełnij najpierw wszystkie pola!");
-            return;
-        }
+        // Wywołanie metody po stronie serwera
+        Meteor.call('postAdd', newPost, function(error, result) 
+        {
+            // Coś poszło nie tak?
+            if (error) return alert(error.reason);
 
-        Posts.insert(newPost);
-        $('.new-post-form').hide();
+            // Ukrywamy formularz dodawania postu
+            $('.new-post-form').hide();
+        });
     }
 });

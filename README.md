@@ -17,7 +17,7 @@ Poszczególne części kursu można przeczytać pod poniższymi odnośnikami:
 * Instalujemy Meteora: `curl https://install.meteor.com/ | sh`
 * Pobieramy paczkę z aplikacją i rozpakowujemy ją
 * Wchodzimy do katalogu i wydajemy w konsoli polecenie: `meteor`
-* Aplikacja będzie dostępna pod adresem http://localhost:8000
+* Aplikacja będzie dostępna pod adresem [http://localhost:3000](http://localhost:3000)
 
 ## Demo
 
