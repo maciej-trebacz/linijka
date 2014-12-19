@@ -73,6 +73,9 @@ a.post-vote:hover {
     text-align: center;
     color: #aaa;
 }
+.post.voted .vote-up, .post.voted .vote-down {
+    opacity: 0.25;
+}
 
 /* Nadpisanie niektórych stylów z Bootstrapa */
 
