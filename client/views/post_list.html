@@ -1,0 +1,30 @@
+<template name="postList">
+    <div class="container post-list">
+        {{#if user}}
+        {{> postAddForm}}
+        {{/if}}
+        
+        {{#if posts}}
+        {{#each posts}}
+            {{> postListItem}}
+        {{/each}}
+        {{else}}
+            <h3 class="post-list-no-posts">Nie ma żadnych postów :(</h3>
+        {{/if}}
+    </div>
+</template>
+
+<template name="postListItem">
+    <div class="post">
+        <div class="post-votes">
+            <a class="post-vote vote-up">▲</a>
+            <p class="post-vote vote-count">{{votes}}</p>
+            <a class="post-vote vote-down">▼</a>
+        </div>
+        <div class="post-details">
+            <h3><a href="{{link}}" target="_blank">{{title}}</a></h3>
+            <p class="post-date-author">dodane {{time}} przez <span class="post-author">{{author.username}}</span></p>
+            <p class="post-comments"><a href="#">{{comments_num}} komentarzy</a></p>
+        </div>
+    </div>
+</template>
