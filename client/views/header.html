@@ -8,7 +8,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Linijka</a>
+          <a class="navbar-brand" href="/">Linijka</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -17,7 +17,7 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             {{#if user}}
-            <li><a href="#" class="new-post-button">Dodaj</a></li>
+            <li><a href="{{pathFor 'postAdd'}}" class="new-post-button">Dodaj</a></li>
             {{/if}}
             {{> loginButtons align="right"}}
           </ul>

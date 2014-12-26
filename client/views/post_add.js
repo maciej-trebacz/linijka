@@ -1,4 +1,4 @@
-Template.postAddForm.events({
+Template.postAdd.events({
     'submit form': function (e) {
         e.preventDefault();
 
@@ -15,8 +15,8 @@ Template.postAddForm.events({
             // Coś poszło nie tak?
             if (error) return alert(error.reason);
 
-            // Ukrywamy formularz dodawania postu
-            $('.new-post-form').hide();
+            // Wracamy na stronę główną
+            Router.go('/');
         });
     }
 });

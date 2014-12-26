@@ -1,9 +1,5 @@
 <template name="postList">
     <div class="container post-list">
-        {{#if user}}
-        {{> postAddForm}}
-        {{/if}}
-        
         {{#if posts}}
         {{#each posts}}
             {{> postListItem}}
