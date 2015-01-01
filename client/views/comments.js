@@ -11,7 +11,8 @@ Template.commentItem.helpers({
         return moment(added).fromNow();
     },
     author: function() {
-        return Meteor.users.findOne(this.author);
+        var author = Meteor.users.findOne(this.author);
+        return author.username || author.profile.name;
     }
 });
 

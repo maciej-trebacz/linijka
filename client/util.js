@@ -10,3 +10,5 @@ Accounts.ui.config({
 UI.registerHelper("user", function() {
     return Meteor.user();
 });
+
+accountsUIBootstrap3.setLanguage('pl');

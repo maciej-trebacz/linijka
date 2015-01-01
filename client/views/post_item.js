@@ -3,7 +3,8 @@ Template.postItem.helpers({
         return moment(this.added_on).fromNow();
     },
     author: function() {
-        return Meteor.users.findOne(this.author);
+        var author = Meteor.users.findOne(this.author);
+        return author.username || author.profile.name;
     },
     voted: function() {
         var user_id = Meteor.userId();
