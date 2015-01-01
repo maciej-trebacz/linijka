@@ -273,3 +273,21 @@ a.post-vote:hover {
 .col-sm-12 {
     width: 100%;
 }
+
+.comment {
+    padding: 5px;
+}
+
+.comment-date-author { 
+    margin: 0;
+    font-size: 12px;
+}
+
+.comment-author {
+    font-weight: bold;
+    color: #378;
+}
+
+.comment-date {
+    color: #aaa;
+}
