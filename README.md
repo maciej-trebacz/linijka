@@ -11,6 +11,8 @@ Poszczególne części kursu można przeczytać pod poniższymi odnośnikami:
 * [Część pierwsza - wprowadzenie](https://www.notehub.org/2014/11/29/kurs-meteora-dla-mirków)
 * [Część druga - szablony i kolekcje](https://www.notehub.org/2014/12/5/kurs-meteora-dla-mirków)
 * [Część trzecia - użytkownicy i dodawanie postów](https://www.notehub.org/2014/12/12/kurs-meteora-dla-mirków)
+* [Część czwarta - bezpieczeństwo, głosowanie](https://www.notehub.org/2014/12/21/kurs-meteora-dla-mirków)
+* [Część piąta - trasowanie, komentarze](https://www.notehub.org/2015/1/4/kurs-meteora-dla-mirków)
 
 ## Uruchomienie aplikacji na swoim komputerze
 
