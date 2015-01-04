@@ -12,6 +12,13 @@ Template.postItem.helpers({
 
         if (_.contains(this.upvoters, user_id) || _.contains(this.downvoters, user_id))
             return "voted";
+    },
+    comments_text: function() {
+        var n = this.comments_num;
+        if (n == 1) return "komentarz";
+        if (n % 100 >= 10 && n % 100 <= 20) return "komentarzy";
+        if (n % 10 > 1 && n % 10 < 5) return "komentarze";
+        return "komentarzy";
     }
 });
 
